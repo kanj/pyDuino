@@ -1,0 +1,36 @@
+pyDuino18  ver 1.0
+
+Copyright 2012 by Kirk Terrell (knjterrell@mybluelight.com) under the MIT License
+This work is based on Python Arduino Prototyping API, 
+
+
+PyDuino helps you to quickly prototype Arduino programs, 
+without having to repeatedly load the program to the Arduino board.
+
+#### Setup:
+
+1. Load prototype.pde onto your Arduino dev board.
+2. Import the arduino lib in your python script.
+
+
+## Methods
+
+The methods reflect the same usage as the arduino language, thru release 18. An additional method pulseOut(pin, duration) is included. 
+This was to address sending short pulses to a servo. Which could not be done due to the constrainst of serial communication. Two additional methods
+exist in Arduino release 1.0 that are not in Arduino 18 aRef and shiftIn. These will be implemented in a future release.
+
+### Functions
+
+Additionally the functions for arduino have been included in the arduino lib. One exception is noted map in Arduino conflicts with map in python. 
+It has been renamed aMap in this implementation. Certain additional functions exist in Arduino 1.0, and will be implemented in a future release
+
+### Testing
+
+The included sample programs were used to verify functionality of the software.
+
+## Limitations
+
+There a number of limitations:
+    1)  Only implements Arduino Release 18
+    2)  Responsiveness is limited by rate ofd serial communication
+    3)  Unable to use analog pins digitally
